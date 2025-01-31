@@ -9,6 +9,9 @@ body {
   line-height: 1.7;
   font-weight: 400;
 }
+body.is-fixed {
+  overflow: hidden;
+}
 
 @media screen and (min-width: 600px) {
   .hidden-sm {
@@ -203,6 +206,7 @@ body {
   width: 30px;
   height: 18px;
   position: relative;
+  z-index: 30;
 }
 .drawer-icon.is-checked .drawer-icon__bar:nth-child(1), .drawer-icon.is-checked .drawer-icon__bar:nth-child(3) {
   top: 9px;

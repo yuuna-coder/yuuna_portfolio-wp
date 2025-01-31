@@ -81,3 +81,8 @@ jQuery(function () {
     return false;
   });
 });
+
+jQuery("#js-drawer-button").on("click", function (e) {
+  e.preventDefault();
+  jQuery("body").toggleClass("is-fixed");
+});

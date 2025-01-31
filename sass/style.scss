@@ -30,6 +30,10 @@ body {
   font-size: 16px;
   line-height: 1.7;
   font-weight: 400;
+
+  &.is-fixed {
+    overflow: hidden;
+  }
 }
 
 @include mq("sm") {
@@ -207,6 +211,7 @@ body {
   width: 30px;
   height: 18px;
   position: relative;
+  z-index: 30;
 
   &.is-checked {
     .drawer-icon__bar {

@@ -1,65 +1,10 @@
-<!DOCTYPE html>
-<html lang="ja">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="robots" content="noindex" />
-    <title>Yuuna's Portfolio</title>
-    <meta
-      name="description"
-      content="Web制作者を目指す原 由奈のポートフォリオサイトです。"
-    />
-    <link rel="shortcut icon" href="<?php echo get_template_directory_uri() ?>/favicon.ico" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Noto+Serif+JP:wght@200..900&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
-    <link rel="stylesheet" href="./css/lib/animate.css" />
-    <link rel="stylesheet" href="./css/reset.css" />
-    <link rel="stylesheet" href="./css/style.css" />
-    <?php wp_head(); ?>
-  </head>
-  <body>
-    <!-- ヘッダー -->
-    <header class="header">
-      <div class="header__top"></div>
-      <div class="header__inner inner">
-        <h1 class="header__logo">
-          <a href="">
-            <img src="<?php echo get_template_directory_uri() ?>/img/logo.png" alt="Yuuna's Portfolio" />
-          </a>
-        </h1>
-        <button
-          id="js-drawer-button"
-          type="button"
-          class="header__icon drawer-icon"
-        >
-          <span class="drawer-icon__bar"></span>
-          <span class="drawer-icon__bar"></span>
-          <span class="drawer-icon__bar"></span>
-        </button>
-        <nav id="js-drawer-content" class="header__nav">
-          <ul class="header__lists">
-            <li class="header__list"><a href="#home">Home</a></li>
-            <li class="header__list"><a href="#about">About</a></li>
-            <li class="header__list"><a href="#works">Works</a></li>
-            <li class="header__list"><a href="#contact">Contact</a></li>
-          </ul>
-        </nav>
-      </div>
-    </header>
+<?php get_header(); ?>
 
     <main class="main">
       <!-- ファーストビュー -->
       <div class="fv" id="home">
         <picture class="fv__image">
-          <source media="(min-width: 768px)" srcset="./img/fv.jpg" />
+          <source media="(min-width: 768px)" srcset="<?php echo get_template_directory_uri() ?>/img/fv.jpg" />
           <img
             src="<?php echo get_template_directory_uri() ?>/img/fv (1).jpg"
             alt="学び続け、価値を生むWeb制作を Yuuna Hara 今も成長中、明日もっと頼れる存在に"
@@ -126,12 +71,44 @@
               <div id="js-works-swiper" class="swiper works__swiper">
                 <!-- Additional required wrapper -->
                 <div class="swiper-wrapper">
-                  <!-- Slides -->
+
+                <?php
+                $args = array(
+                  'post_type' => 'work', // Custom Post Typeのスラッグ
+                  'posts_per_page' => 3,  // 表示件数
+                  'orderby' => 'date',    // 日付順
+                  'order' => 'ASC',      // ASCで昇順、DESCで降順
+                );
+                $query = new WP_Query($args);
+
+                if ($query->have_posts()) :
+                  while ($query->have_posts()) : $query->the_post(); ?>
                   <div class="swiper-slide works__slide">
+                    <div class="works-card">
+                    <?php if (has_post_thumbnail()) : ?>
+                      <a href="<?php the_permalink(); ?>" target="_blank">
+                        <div class="works-card__image">
+                          <img src="<?php the_post_thumbnail_url(); ?>" alt="<?php the_title(); ?>" />
+                        </div>
+                        <p class="gallery-card__text">
+                          <?php the_title(); ?>
+                        </p>
+                      </a>
+                      <?php endif; ?>
+                    </div>
+                  </div>
+                <?php endwhile;
+                  wp_reset_postdata();
+                else : ?>
+                  <p>画像がありません。</p>
+                <?php endif; ?>
+                </div>
+                  <!-- Slides -->
+                  <!-- <div class="swiper-slide works__slide">
                     <div class="works-card">
                       <a href="" target="_blank">
                         <div class="works-card__image">
-                          <img src="<?php echo get_template_directory_uri() ?>/img/works_OHA!.png" alt="" />
+                          <img src="<?php echo get_template_directory_uri() ?>/img/works_portforio.png" alt="" />
                         </div>
                         <p class="works-card__text">Yuuna's Portforio</p>
                       </a>
@@ -141,7 +118,7 @@
                     <div class="works-card">
                       <a href="" target="_blank">
                         <div class="works-card__image">
-                          <img src="<?php echo get_template_directory_uri() ?>/img/works_OHA!.png" alt="" />
+                          <img src="<?php echo get_template_directory_uri() ?>/img/works_sobolon.png" alt="" />
                         </div>
                         <p class="works-card__text">【架空ページ】sobolon</p>
                       </a>
@@ -157,7 +134,7 @@
                       </a>
                     </div>
                   </div>
-                </div>
+                </div> -->
                 <!-- If we need pagination -->
                 <div
                   id="js-works-pagination"
@@ -222,55 +199,4 @@
       </section>
     </main>
 
-    <!-- Footer -->
-    <footer class="footer">
-      <div class="footer__inner inner">
-        <div class="footer__logo">
-          <a href="" target="_blank"><img src="<?php echo get_template_directory_uri() ?>/img/logo.png" alt="" /></a>
-        </div>
-      </div>
-      <ul class="footer__sns-items">
-        <li class="footer__sns-item">
-          <a
-            href="https://x.com/yuna20240611"
-            class="footer__sns-link"
-            target="_blank"
-          >
-            <img src="<?php echo get_template_directory_uri() ?>/img/logo/twitter.png" alt="" class="is-x" />
-          </a>
-        </li>
-        <li class="footer__sns-item">
-          <a href="" class="footer__sns-link" target="_blank">
-            <img
-              src="<?php echo get_template_directory_uri() ?>/img/logo/Mark/Color/RGB/Wantedly_Mark_LightBG.png"
-              alt=""
-              class="is-wantedly"
-            />
-          </a>
-        </li>
-        <li class="footer__sns-item">
-          <a
-            href="https://github.com/yuuna-coder"
-            class="footer__sns-link"
-            target="_blank"
-          >
-            <img src="<?php echo get_template_directory_uri() ?>/img/logo/github.png" alt="" class="is-github" />
-          </a>
-        </li>
-      </ul>
-      <p class="footer__copyright">
-        <small>&copy; 2025 Yuuna's Portfolio All Rights Reserved.</small>
-      </p>
-    </footer>
-
-    <p id="pageTop">TOP</p>
-
-    <script src="./js/lib/wow.min.js"></script>
-    <script>
-      new WOW().init();
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <?php wp_footer(); ?>
-  </body>
-</html>
+<?php get_footer(); ?>
