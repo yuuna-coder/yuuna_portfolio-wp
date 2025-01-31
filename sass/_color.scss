@@ -1,0 +1,18 @@
+// サイトで使用する色を定義
+
+// フォント色
+$font-white: #FFFFFF; // 白いフォント
+$font-darkgray: #333333; // 濃いグレーのフォント（主要テキストに使用）
+$font-gray: #6C6E6F; // 中間的なグレーのフォント
+
+// 背景色
+$base-light: #FFFFFF; // 明るい白（基本的な背景用）
+$base-light-blue: #F4FBFD; // 淡い青（サブ背景用）
+
+// アクセント色
+$accent-orange: #FF8B71; // 温かみのあるオレンジ色
+$accent-skyblue: #82BFED; // 明るい空色
+$accent-mint: #C6ECEC; // 柔らかいミントグリーン
+
+// グラデーション
+$gradation: linear-gradient(177deg, #50BFCB -29.45%, rgba(80, 191, 203, 0.42) 127.88%); // グラデーション背景用
