@@ -2,7 +2,7 @@
     <footer class="footer">
       <div class="footer__inner inner">
         <div class="footer__logo">
-          <a href="" target="_blank"><img src="<?php echo get_template_directory_uri() ?>/img/logo.png" alt="" /></a>
+          <a href="http://yuunas-portforio.local/" target="_blank"><img src="<?php echo get_template_directory_uri() ?>/img/logo.png" alt="" /></a>
         </div>
       </div>
       <ul class="footer__sns-items">

@@ -28,7 +28,7 @@
             </p>
           </div>
           <div class="fv__button">
-            <a href="#works" class="button">実績を見る</a>
+            <a href="http://yuunas-portforio.local/work/" class="button">実績を見る</a>
           </div>
         </div>
       </div>
@@ -51,7 +51,7 @@
                 1997年4月、埼玉県出身。学び続ける姿勢を大切にし、成長を楽しむWeb制作者です。現在はベーカリーでの業務を行いながら、Web制作スキルを磨くためデイトラのWeb制作コースを受講中。HTML/CSSやWordPressを中心に、制作の幅を広げています。「学び続け、価値を生むWeb制作」をモットーに成長中です。
               </p>
               <div class="about__button">
-                <a href="" class="button button-2">ABOUT ME</a>
+                <a href="http://yuunas-portforio.local/about/about/" class="button button-2">ABOUT ME</a>
               </div>
             </div>
           </div>
@@ -153,7 +153,7 @@
               </div>
             </div>
             <div class="works__button">
-              <a href="" class="button button-2">VIEW MORE</a>
+              <a href="http://yuunas-portforio.local/work/" class="button button-2">VIEW MORE</a>
             </div>
           </div>
         </div>
@@ -191,7 +191,7 @@
               <p class="contact__e-mail">yuna.hara.85moru@gmail.com</p>
 
               <div class="contact__button">
-                <a href="" class="button button-2">SEND MAIL</a>
+                <a href="mailto:yuna.hara.85moru@gmail.com" class="button button-2" target="_blank">SEND MAIL</a>
               </div>
             </div>
           </div>

@@ -21,10 +21,10 @@
     <div class="w-works__inner inner">
         <div class="w-works__tags">
             <div class="w-works__tag">
-                <a class="is-active" href="">ALL</a>
+                <a href="http://yuunas-portforio.local/work/">ALL</a>
             </div>
             <div class="w-works__tag">
-                <a href="http://yuunas-portforio.local/works_category/lp/">LP</a>
+                <a class="is-active" href="http://yuunas-portforio.local/works_category/lp/">LP</a>
             </div>
             <div class="w-works__tag">
                 <a href="http://yuunas-portforio.local/works_category/wordpress/">WordPress</a>
@@ -39,6 +39,14 @@
                 'post_type'      => 'work',
                 'orderby'        => 'date',
                 'order'          => 'DESC',
+                'tax_query'      => array(
+                    array(
+                        'taxonomy' => 'works_category',
+                        'field'    => 'slug',
+                        'terms'    => 'lp',
+                    ),
+                ),
+
             );
             $work_query = new WP_Query($args);
             ?>

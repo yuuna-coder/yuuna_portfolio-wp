@@ -34,7 +34,6 @@
         <div class="w-works__content">
             <div class="w-works__posts">
             <?php
-            // WP_Queryで最新のお知らせ3件を取得
             $args = array(
                 'post_type'      => 'work',
                 'orderby'        => 'date',

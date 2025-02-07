@@ -32,7 +32,7 @@
       <div class="header__top"></div>
       <div class="header__inner inner">
         <h1 class="header__logo">
-          <a href="">
+          <a href="http://yuunas-portforio.local/">
             <img src="<?php echo get_template_directory_uri() ?>/img/logo.png" alt="Yuuna's Portfolio" />
           </a>
         </h1>
