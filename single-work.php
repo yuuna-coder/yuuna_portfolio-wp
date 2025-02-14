@@ -16,58 +16,79 @@
   </div><!-- /breadcrumb -->
 <?php endif; ?>
 
+<?php if (have_posts()) : ?>
+  <?php while (have_posts()) : ?>
+    <?php the_post(); ?>
 
-<!-- content -->
-<div id="content" class="content-work">
-  <div class="inner">
-    <!-- primary -->
-    <main id="primary">
-      <!-- entry -->
-      <article class="entry entry-work">
-        <!-- entry-header -->
-        <div class="entry-header">
-          <div class="entry-label">
-            <?php
-            $terms = get_the_terms(get_the_ID(), 'works_category');
-            if ($terms && !is_wp_error($terms)) :
-                $term = array_shift($terms);
-                $term_name = esc_html($term->name);
-            ?>
-            <a href=""><?php echo $term_name; ?></a>
-            <?php endif; ?>
+    <!-- content -->
+    <div class="content-work">
+      <div class="content-work__inner inner">
+          <h1 class="content-work__title"><?php the_title(); ?></h1>
+          <div class="content-work__top">
+            <div class="content-work__url">
+              <div class="content-work__url-title">URL
+                <?php if(get_field('url')) : ?>
+                <a href="<?php the_field('url'); ?>" target="_blank"><?php the_field('url'); ?></a>
+                <?php endif; ?>
+              </div>
+              <p class="content-work__url-text">このサイトは、検索に掛らないようにしています。Basic認証をかけていますID・passwordの入力をお願いします。</p>
+            </div>
+            <div class="content-work__key">
+              <div class="content-work__id">
+                <div class="content-work__id-title">ID</div>
+                <div class="content-work__id-id">yuunatest</div>
+              </div>
+              <div class="content-work__password">
+                <div class="content-work__password-title">PASSWORD</div>
+                <div class="content-work__password-password">yuunatest</div>
+              </div>
+            </div>
           </div>
-          <h1 class="entry-title"><?php the_title(); ?></h1>
-          <div class="entry-img">
+          <div class="content-work__img">
             <img src="<?php the_post_thumbnail_url(); ?>" alt="">
           </div>
-        </div><!-- /entry-header -->
-        <div class="entry-work-body">
-          <div class="entry-work-content">
-            カスタム投稿、カスタムタクソノミーでサイト構造の整理を行い、カスタムフィールドの活用によって、お客様にとっても操作性の高い管理画面の設計を行っています。
-          </div>
-          <div class="entry-work-table">
-            <table>
-              <tr>
-                <th>会社名</th>
-                <td>〇〇株式会社</td>
-              </tr>
-              <tr>
-                <th>サイトURL</th>
-                <td>https://example.com</td>
-              </tr>
-              <tr>
-                <th>担当範囲</th>
-                <td>デザイン、コーディング</td>
-              </tr>
-            </table>
-          </div><!-- /entry-work-table -->
-        </div><!-- /entry-work-body" -->
-        <div class="entry-work-btn ">
-          <a class="button" href="">一覧に戻る</a>
-        </div><!-- /entry-work-btn -->
-      </article><!-- /entry -->
-    </main><!-- /primary -->
-  </div><!-- /inner -->
-</div><!-- /content -->
+          <div class="content-work__body">
+            <div class="content-work__target">
+              <div class="content-work__target-title">TARGET</div>
+              <?php if(get_field('target')) : ?>
+              <div class="content-work__target-text">
+                <?php echo nl2br(esc_html(get_field('target'))); ?>
+              </div>
+              <?php endif; ?>
+            </div>
+            <div class="content-work__purpose">
+              <div class="content-work__purpose-title">PURPOSE</div>
+              <?php if(get_field('purpose')) : ?>
+              <div class="content-work__purpose-text">
+                <?php echo nl2br(esc_html(get_field('purpose'))); ?>
+              </div>
+              <?php endif; ?>
+            </div>
+            <div class="content-work__work">
+              <div class="content-work__work-title">WORK</div>
+              <?php if(get_field('work')) : ?>
+              <div class="content-work__work-text">
+                <?php echo nl2br(esc_html(get_field('work'))); ?>
+              </div>
+              <?php endif; ?>
+            </div>
+            <div class="content-work__period">
+              <div class="content-work__period-title">PERIOD</div>
+              <?php if(get_field('period')) : ?>
+              <div class="content-work__period-text">
+                <?php echo nl2br(esc_html(get_field('period'))); ?>
+              </div>
+              <?php endif; ?>
+            </div>
+          </div><!-- /content-work-body" -->
+          <div class="content-work-btn ">
+            <a class="button" href="<?php echo get_post_type_archive_link('work'); ?>">制作一覧</a>
+          </div><!-- /content-work-btn -->
+
+        </div><!-- /inner -->
+      </div><!-- /content-work -->
+
+  <?php endwhile; ?>
+<?php endif; ?>
 
 <?php get_footer(); ?>

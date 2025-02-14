@@ -160,7 +160,7 @@
       </section>
 
        <!-- About -->
-       <section id="about" class="about hello section">
+       <!-- <section id="about" class="about hello section">
         <div class="about__inner inner">
           <h2 class="heading section-title wow fadeInUp">
             <span class="heading__en">Skill</span>
@@ -170,5 +170,5 @@
             
           </div>
         </div>
-      </section>
+      </section> -->
 <?php get_footer(); ?>
