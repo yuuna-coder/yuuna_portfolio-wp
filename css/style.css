@@ -246,18 +246,18 @@ body.is-fixed {
 
 .header__nav {
   background: var(--gradation, linear-gradient(0deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.8) 100%), linear-gradient(180deg, #007adf 0%, #00ecbc 100%));
-  width: 390px;
-  height: calc(100% - 60px);
+  width: 320px;
+  height: 100%;
   position: fixed;
+  top: 0;
   right: 0;
-  top: 60px;
-  padding: 32px 15px;
+  padding: 100px 40px 40px;
   -webkit-transform: translateX(100%);
           transform: translateX(100%);
-  -webkit-transition: -webkit-transform 0.4s;
-  transition: -webkit-transform 0.4s;
-  transition: transform 0.4s;
-  transition: transform 0.4s, -webkit-transform 0.4s;
+  -webkit-transition: -webkit-transform 0.3s linear;
+  transition: -webkit-transform 0.3s linear;
+  transition: transform 0.3s linear;
+  transition: transform 0.3s linear, -webkit-transform 0.3s linear;
   z-index: 20;
 }
 .header__nav.is-checked {

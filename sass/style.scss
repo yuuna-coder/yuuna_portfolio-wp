@@ -264,14 +264,21 @@ body {
     ),
     linear-gradient(180deg, #007adf 0%, #00ecbc 100%)
   );
-  width: 390px;
-  height: calc(100% - $header-height-sp);
+  width: 320px;
+  height: 100%;
   position: fixed;
+  top: 0;
   right: 0;
-  top: $header-height-sp;
-  padding: calc(40px - 8px) 15px;
+  padding: 100px 40px 40px;
+  // width: 390px;
+  // height: calc(100% - $header-height-sp);
+  // position: fixed;
+  // right: 0;
+  // top: $header-height-sp;
+  // padding: calc(40px - 8px) 15px;
   transform: translateX(100%);
-  transition: transform 0.4s;
+  transition: transform 0.3s linear;
+  // transition: transform 0.4s;
   z-index: 20;
 
   &.is-checked {
@@ -1202,8 +1209,6 @@ img.emoji {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
-
-
 }
 
 .content-work__title {

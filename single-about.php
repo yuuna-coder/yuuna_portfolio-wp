@@ -44,7 +44,7 @@
                   </a>
                 </li>
                 <li class="about__sns-item">
-                  <a href="" class="about__sns-link" target="_blank">
+                  <a href="https://www.wantedly.com/id/yuuna_hara_web" class="about__sns-link" target="_blank">
                     <img
                       src="<?php echo get_template_directory_uri() ?>/img/logo/Mark/Color/RGB/Wantedly_Mark_LightBG.png"
                       alt=""

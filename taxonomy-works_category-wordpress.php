@@ -21,13 +21,13 @@
     <div class="w-works__inner inner">
         <div class="w-works__tags">
             <div class="w-works__tag">
-                <a href="http://yuunas-portforio.local/work/">ALL</a>
+                <a href="http://yuunaportfolio.s324.xrea.com/?post_type=work">ALL</a>
             </div>
             <div class="w-works__tag">
-                <a href="http://yuunas-portforio.local/works_category/lp/">LP</a>
+                <a href="http://yuunaportfolio.s324.xrea.com/?works_category=lp">LP</a>
             </div>
             <div class="w-works__tag">
-                <a class="is-active" href="http://yuunas-portforio.local/works_category/wordpress/">WordPress</a>
+                <a class="is-active" href="http://yuunaportfolio.s324.xrea.com/?works_category=wordpress">WordPress</a>
             </div>
         </div>
         <!-- content -->

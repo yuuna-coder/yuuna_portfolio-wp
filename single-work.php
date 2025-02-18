@@ -27,9 +27,9 @@
           <div class="content-work__top">
             <div class="content-work__url">
               <div class="content-work__url-title">URL
-                <?php if(get_field('url')) : ?>
+              <?php if(get_field('url')) : ?>
                 <a href="<?php the_field('url'); ?>" target="_blank"><?php the_field('url'); ?></a>
-                <?php endif; ?>
+            <?php endif; ?>
               </div>
               <p class="content-work__url-text">このサイトは、検索に掛らないようにしています。Basic認証をかけていますID・passwordの入力をお願いします。</p>
             </div>
@@ -49,36 +49,38 @@
           </div>
           <div class="content-work__body">
             <div class="content-work__target">
+            <?php if(get_field('target')) : ?>
               <div class="content-work__target-title">TARGET</div>
-              <?php if(get_field('target')) : ?>
               <div class="content-work__target-text">
                 <?php echo nl2br(esc_html(get_field('target'))); ?>
               </div>
-              <?php endif; ?>
+            <?php endif; ?>
             </div>
             <div class="content-work__purpose">
+            <?php if(get_field('purpose')) : ?>
               <div class="content-work__purpose-title">PURPOSE</div>
-              <?php if(get_field('purpose')) : ?>
               <div class="content-work__purpose-text">
                 <?php echo nl2br(esc_html(get_field('purpose'))); ?>
               </div>
-              <?php endif; ?>
+            <?php endif; ?>
             </div>
+            
             <div class="content-work__work">
+            <?php if(get_field('work')) : ?>
               <div class="content-work__work-title">WORK</div>
-              <?php if(get_field('work')) : ?>
               <div class="content-work__work-text">
                 <?php echo nl2br(esc_html(get_field('work'))); ?>
               </div>
-              <?php endif; ?>
+            <?php endif; ?>
             </div>
+
             <div class="content-work__period">
+            <?php if(get_field('period')) : ?>
               <div class="content-work__period-title">PERIOD</div>
-              <?php if(get_field('period')) : ?>
               <div class="content-work__period-text">
                 <?php echo nl2br(esc_html(get_field('period'))); ?>
               </div>
-              <?php endif; ?>
+            <?php endif; ?>
             </div>
           </div><!-- /content-work-body" -->
           <div class="content-work-btn ">

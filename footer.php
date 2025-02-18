@@ -2,7 +2,7 @@
     <footer class="footer">
       <div class="footer__inner inner">
         <div class="footer__logo">
-          <a href="http://yuunas-portforio.local/" target="_blank"><img src="<?php echo get_template_directory_uri() ?>/img/logo.png" alt="" /></a>
+          <a href="http://yuunaportfolio.s324.xrea.com/" target="_blank"><img src="<?php echo get_template_directory_uri() ?>/img/logo.png" alt="" /></a>
         </div>
       </div>
       <ul class="footer__sns-items">
@@ -16,7 +16,7 @@
           </a>
         </li>
         <li class="footer__sns-item">
-          <a href="" class="footer__sns-link" target="_blank">
+          <a href="https://www.wantedly.com/id/yuuna_hara_web" class="footer__sns-link" target="_blank">
             <img
               src="<?php echo get_template_directory_uri() ?>/img/logo/Mark/Color/RGB/Wantedly_Mark_LightBG.png"
               alt=""

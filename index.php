@@ -28,7 +28,7 @@
             </p>
           </div>
           <div class="fv__button">
-            <a href="http://yuunas-portforio.local/work/" class="button">実績を見る</a>
+            <a href="http://yuunaportfolio.s324.xrea.com/?post_type=work" class="button">実績を見る</a>
           </div>
         </div>
       </div>
@@ -51,7 +51,7 @@
                 1997年4月、埼玉県出身。学び続ける姿勢を大切にし、成長を楽しむWeb制作者です。現在はベーカリーでの業務を行いながら、Web制作スキルを磨くためデイトラのWeb制作コースを受講中。HTML/CSSやWordPressを中心に、制作の幅を広げています。「学び続け、価値を生むWeb制作」をモットーに成長中です。
               </p>
               <div class="about__button">
-                <a href="http://yuunas-portforio.local/about/about/" class="button button-2">ABOUT ME</a>
+                <a href="http://yuunaportfolio.s324.xrea.com/?about=about" class="button button-2">ABOUT ME</a>
               </div>
             </div>
           </div>
@@ -75,7 +75,7 @@
                 <?php
                 $args = array(
                   'post_type' => 'work', // Custom Post Typeのスラッグ
-                  'posts_per_page' => 3,  // 表示件数
+                  'posts_per_page' => 8,  // 表示件数
                   'orderby' => 'date',    // 日付順
                   'order' => 'ASC',      // ASCで昇順、DESCで降順
                 );
@@ -153,7 +153,7 @@
               </div>
             </div>
             <div class="works__button">
-              <a href="http://yuunas-portforio.local/work/" class="button button-2">VIEW MORE</a>
+              <a href="http://yuunaportfolio.s324.xrea.com/?post_type=work" class="button button-2">VIEW MORE</a>
             </div>
           </div>
         </div>
