@@ -132,7 +132,7 @@ body {
 }
 
 .button-2 {
-  min-width: 230px;
+  min-width: 220px;
   padding: 10px calc(15.22px + 7.281px + 16px) 10px 16px;
   position: relative;
 
@@ -269,7 +269,7 @@ body {
   position: fixed;
   top: 0;
   right: 0;
-  padding: 100px 40px 40px;
+  padding: 100px 55px 55px;
   // width: 390px;
   // height: calc(100% - $header-height-sp);
   // position: fixed;
@@ -756,6 +756,7 @@ body {
   margin-top: 5px;
   font-size: 22px;
   font-weight: 700;
+  overflow-wrap: break-word;
 
   @include mq("sm") {
     margin-top: 18px;
@@ -1235,11 +1236,12 @@ img.emoji {
 }
 
 .content-work__url {
-  font-size: 16px;
+  font-size: 14px;
 }
 
 .content-work__url-title {
   a {
+    overflow-wrap: break-word;
     margin-left: 16px;
   }
 }
@@ -1255,7 +1257,7 @@ img.emoji {
 
 .content-work__key {
   margin-top: 20px;
-  font-size: 16px;
+  font-size: 14px;
 }
 
 .content-work__id {

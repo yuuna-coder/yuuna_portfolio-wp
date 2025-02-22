@@ -24,7 +24,7 @@
     <div class="content-work">
       <div class="content-work__inner inner">
           <h1 class="content-work__title"><?php the_title(); ?></h1>
-          <div class="content-work__top">
+          <!-- <div class="content-work__top">
             <div class="content-work__url">
               <div class="content-work__url-title">URL
               <?php if(get_field('url')) : ?>
@@ -43,11 +43,58 @@
                 <div class="content-work__password-password">yuunatest</div>
               </div>
             </div>
-          </div>
+          </div> -->
           <div class="content-work__img">
             <img src="<?php the_post_thumbnail_url(); ?>" alt="">
           </div>
           <div class="content-work__body">
+
+          <!-- <div class="content-work__top">
+            <div class="content-work__url">
+              <div class="content-work__url-title">URL
+              <?php if(get_field('url')) : ?>
+                <a href="<?php the_field('url'); ?>" target="_blank"><?php the_field('url'); ?></a>
+            <?php endif; ?>
+              </div>
+              <p class="content-work__url-text">このサイトは、検索に掛らないようにしています。Basic認証をかけていますID・passwordの入力をお願いします。</p>
+            </div>
+            <div class="content-work__key">
+              <div class="content-work__id">
+                <div class="content-work__id-title">ID</div>
+                <div class="content-work__id-id">yuunatest</div>
+              </div>
+              <div class="content-work__password">
+                <div class="content-work__password-title">PASSWORD</div>
+                <div class="content-work__password-password">yuunatest</div>
+              </div>
+            </div>
+          </div> -->
+
+            <div class="content-work__target">
+            <?php if(get_field('url')) : ?>
+              <div class="content-work__target-title">URL</div>
+              <div class="content-work__target-text">
+                <a href="<?php the_field('url'); ?>" target="_blank"><?php the_field('url'); ?></a>
+                <p class="content-work__url-text">このサイトは、検索に掛らないようにしています。Basic認証をかけていますID・passwordの入力をお願いします。</p>
+
+              </div>
+            <?php endif; ?>
+            </div>
+
+            <div class="content-work__target">
+              <div class="content-work__target-title">ID</div>
+              <div class="content-work__target-text">
+                <p>yuunatest</p>
+              </div>
+            </div>
+
+            <div class="content-work__target">
+              <div class="content-work__target-title">PASSWORD</div>
+              <div class="content-work__target-text">
+                <p>yuunatest</p>
+              </div>
+            </div>
+
             <div class="content-work__target">
             <?php if(get_field('target')) : ?>
               <div class="content-work__target-title">TARGET</div>
