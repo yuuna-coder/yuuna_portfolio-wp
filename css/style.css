@@ -1377,7 +1377,7 @@ img.emoji {
 }
 
 .content-work__body {
-  margin: 60px auto 0;
+  margin: 60px auto;
   width: 100%;
 }
 
@@ -1423,4 +1423,5 @@ img.emoji {
 
 .content-work-btn {
   text-align: center;
+  margin-top: 20px;
 }
