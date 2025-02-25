@@ -28,7 +28,7 @@
             </p>
           </div>
           <div class="fv__button">
-            <a href="http://yuunaportfolio.s324.xrea.com/?post_type=work" class="button">実績を見る</a>
+            <a href="<?php echo get_post_type_archive_link('work'); ?>" class="button">実績を見る</a>
           </div>
         </div>
       </div>
@@ -153,7 +153,7 @@
               </div>
             </div>
             <div class="works__button">
-              <a href="http://yuunaportfolio.s324.xrea.com/?post_type=work" class="button button-2">VIEW MORE</a>
+              <a href="<?php echo get_post_type_archive_link('work'); ?>" class="button button-2">VIEW MORE</a>
             </div>
           </div>
         </div>

@@ -1346,3 +1346,60 @@ img.emoji {
   text-align: center;
   margin-top: 20px;
 }
+
+.entry-404 {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  text-align: center;
+
+  @include mq("sm") {
+    padding-top: 100px;
+    padding-bottom: 85px;
+  }
+}
+
+.entry-404-head {
+  color: #f0cdd0;
+  // font-family: "Lato", sans-serif;
+  font-size: 60px;
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: 25px;
+
+  @include mq("sm") {
+    font-size: 80px;
+
+    line-height: 1.2;
+    margin-bottom: 36px;
+  }
+
+  span::after {
+    content: "";
+  }
+}
+
+.entry-404-lead {
+  color: #808080;
+  // font-family: "HiraKakuPro-W6", "ヒラギノ角ゴ Pro W6", "Meiryo", "Meiryo", "Noto Sans Japanese", sans-serif;
+  font-size: 27px;
+  font-weight: 500;
+  margin-bottom: 20px;
+
+  @include mq("sm") {
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 24px;
+
+    .m_sp {
+      display: none;
+    }
+  }
+}
+
+.entry-404-content {
+  color: #808080;
+}
+
+.entry-404-btn {
+  margin-top: 58px;
+}

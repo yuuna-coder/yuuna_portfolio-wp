@@ -1425,3 +1425,58 @@ img.emoji {
   text-align: center;
   margin-top: 20px;
 }
+
+.entry-404 {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  text-align: center;
+}
+@media screen and (min-width: 600px) {
+  .entry-404 {
+    padding-top: 100px;
+    padding-bottom: 85px;
+  }
+}
+
+.entry-404-head {
+  color: #f0cdd0;
+  font-size: 60px;
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: 25px;
+}
+@media screen and (min-width: 600px) {
+  .entry-404-head {
+    font-size: 80px;
+    line-height: 1.2;
+    margin-bottom: 36px;
+  }
+}
+.entry-404-head span::after {
+  content: "";
+}
+
+.entry-404-lead {
+  color: #808080;
+  font-size: 27px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+@media screen and (min-width: 600px) {
+  .entry-404-lead {
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 24px;
+  }
+  .entry-404-lead .m_sp {
+    display: none;
+  }
+}
+
+.entry-404-content {
+  color: #808080;
+}
+
+.entry-404-btn {
+  margin-top: 58px;
+}
