@@ -51,7 +51,7 @@
                 1997年4月、埼玉県出身。学び続ける姿勢を大切にし、成長を楽しむWeb制作者です。現在はベーカリーでの業務を行いながら、Web制作スキルを磨くためデイトラのWeb制作コースを受講中。HTML/CSSやWordPressを中心に、制作の幅を広げています。「学び続け、価値を生むWeb制作」をモットーに成長中です。
               </p>
               <div class="about__button">
-                <a href="http://yuunaportfolio.s324.xrea.com/?about=about" class="button button-2">ABOUT ME</a>
+                <a href="<?php echo get_page_link(get_page_by_path('about')->ID) ?>" class="button button-2">ABOUT ME</a>
               </div>
             </div>
           </div>
